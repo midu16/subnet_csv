@@ -36,7 +36,10 @@ brange = 32 - cidr_int
 for i in range(brange):
     broad[3-int(i/8)]=broad[3-int(i/8)]+(1<< (i%8))
 
-print(broad)
+#print(broad)
+first_addrs = net[3]+1
+print(first_addrs)
+
 #read the .csv file
 with open('subnet.csv') as csvfile:
      reader = csv.DictReader(csvfile)
